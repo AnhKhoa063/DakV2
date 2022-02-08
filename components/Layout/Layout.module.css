@@ -1,0 +1,157 @@
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    position: relative;
+}
+
+.site__navbar {
+    background-color: #fff;
+    box-shadow: 0px 2px 8px rgb(0 0 0 / 10%);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9;
+}
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__left {
+    background-color: #828282;
+    height: 70px;
+    width: 70px;
+    border-radius: 50px;
+    margin: 10px 0 10px 40px;
+    overflow: hidden;
+}
+
+.social__box {
+    flex: 1.5;
+    margin-left: 180px;
+}
+
+.social__list {
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.social__item {
+    color: #747272;
+    font-size: 34px;
+    opacity: 0.8;
+}
+
+.social__item:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    transition: all ease 0.4s;
+}
+
+.social__item:nth-child(1):hover {
+    color: #f9d205;
+}
+
+.social__item:nth-child(2):hover {
+    color: #1c407b;
+}
+
+.social__item:nth-child(3):hover {
+    color: #179cf0;
+}
+
+.social__item:nth-child(4):hover {
+    color: #222222;
+}
+
+.social__item:nth-child(5):hover {
+    color: #f20000;
+}
+
+.navbar__right {
+    flex: 0.5;
+}
+
+.navbar__right__list {
+    margin: 0 auto;
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbar__right__item {
+    color: #383333;
+    font-size: 32px;
+    opacity: 0.7;
+    cursor: pointer;
+    position: relative;
+}
+
+.navbar__right__item:hover {
+    opacity: 1;
+    transform: translateY(-4px);
+    transition: all ease 0.4s;
+}
+
+.navbar__right__item:nth-child(1):hover {
+    color: #179cf0;
+}
+
+.navbar__right__item:nth-child(2):hover i {
+    background: -webkit-linear-gradient(35deg, #0e8ffd, #fc557c);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.navbar__right__item:nth-child(3):hover {
+    color: #1c407b;
+}
+
+.navbar__right__item:nth-child(4):hover {
+    transform: unset;
+}
+
+.navbar__right__link {
+    position: relative;
+}
+
+.navbar__right__notifi {
+    background-color: red;
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 16px;
+    display: none;
+}
+
+.navbar__right__notifi.active {
+    display: block;
+}
+
+.navbar__right__theme {
+    background-color: #eaeaea;
+    padding: 6px 20px;
+    border-radius: 30px;
+}
+
+.navbar__right__theme i:first-child {
+    margin-right: 12px;
+}
