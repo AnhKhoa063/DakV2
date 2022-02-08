@@ -957,10 +957,6 @@ body {
     color: var(--text-color);
 }
 
-.profile__category-list > option {
-
-}
-
 .profile__user-private {
     background-color: #e5e5e5;
     padding: 12px 34px;
