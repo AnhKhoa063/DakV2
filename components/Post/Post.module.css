@@ -1,0 +1,110 @@
+.profile__user__post {
+    background-color: var(--main-background);
+    overflow: hidden;
+    border-radius: 4px;
+    padding: 12px 0;
+    margin-top: 20px;
+    box-shadow: 0px 4px 4px var(--shadow-color);
+}
+
+.profile__user__post__top {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.profile__user__avatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 12px;
+}
+
+.profile__user__input {
+    flex: 1;
+    font-size: 16px;
+    line-height: 28px;
+    border: none;
+    outline: none;
+    padding: 8px 12px;
+    border-radius: 24px;
+    color: var(--sub-text-color);
+}
+
+.profile__user__input::placeholder {
+    color: var(--sub-text-color);
+    opacity: 0.8;
+}
+
+.profile__user__post__top > i {
+    font-size: 18px;
+    margin: 12px;
+    background-color: #e4e4e4;
+    padding: 16px 14px;
+    border-radius: 50%;
+    color: var(--text-color);
+}
+
+.profile__user__post__bottom {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 12px;
+    margin-right: 70px;
+}
+
+.profile__category__list {
+    font-size: 16px;
+    line-height: 28px;
+    background-color: transparent;
+    border-radius: 40px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-weight: 500;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.profile__category__list:hover {
+    background-color: #e4e4e4;
+    transition: all ease 0.4s;
+}
+
+.profile__user__private {
+    background-color: transparent;
+    padding: 12px 34px;
+    border-radius: 40px;
+    font-size: 16px;
+    color: var(--text-color);
+    margin: 0 24px;
+    cursor: pointer;
+}
+
+.profile__user__private:hover {
+    background-color: #e5e5e5;
+    transition: all ease 0.4s;
+}
+
+.profile__user__private > i {
+    font-size: 18px;
+    margin-right: 12px;
+    color: red;
+}
+
+.profile__user__btn {
+    font-size: 16px;
+    padding: 12px 56px;
+    border-radius: 40px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+    color: var(--text-color);
+    background-image: linear-gradient(315deg,#fbb034 0%,#ffdd00 74%);
+    cursor: pointer;
+}

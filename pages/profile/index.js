@@ -2,6 +2,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
+import Post from "../../components/Post/Post";
 import Logo from "../../public/images/Logo.png";
 
 export default function Profile() {
@@ -55,34 +56,7 @@ export default function Profile() {
                         <div className="profile__nav-item">Thống kê</div>
                     </div>
                     <div className="profile__post">
-                        <div className="profile__user-post">
-                            <form action="" className="profile__form-control">
-                                <div className="profile__user-post-top">
-                                    <div className="profile__user-avatar">
-                                        <Image src={Logo} alt="Avatar"/>
-                                    </div>
-                                    <textarea type="text" className="profile__user-input" placeholder="Hãy nhập nội dung"></textarea>
-                                    <i className="fas fa-users"></i>
-                                </div>
-                                <div className="profile__user-post-bottom">
-                                    <select className="profile__category-list" name="category">
-                                        <option value="Danh mục">Danh mục</option>
-                                        <option value="Thú Cưng">Thú Cưng</option>
-                                        <option value="Phim hoạt hình">Phim hoạt hình</option>
-                                        <option value="Nghệ thuật">Nghệ thuật</option>
-                                        <option value="Ô tô">Ô tô</option>
-                                        <option value="Làm đẹp">Làm đẹp</option>
-                                        <option value="Giải trí">Giải trí</option>
-                                        <option value="Phim">Phim</option>
-                                    </select>
-                                    <div className="profile__user-private">
-                                        <i className="fas fa-unlock-alt"></i>
-                                        Riêng tư
-                                    </div>
-                                    <button className="profile__user-btn">Đăng</button>
-                                </div>
-                            </form>
-                        </div>
+                        <Post/>
                     </div>
                 </div>
             </section>
