@@ -4,13 +4,15 @@ import Footer from "../../components/Footer/Footer";
 import Layout from "../../components/Layout/Layout";
 import Post from "../../components/Post/Post";
 import Logo from "../../public/images/Logo.png";
+import PostPicture1, { PostPicture2, PostPicture3, PostPicture4 } from "../../components/PostPicture/PostPicture";
 
 export default function Profile() {
     return(
         <Layout>
             <Head>
-                <title>Profile</title>
+                <title>DAK - Profile</title>
                 <link rel="stylesheet" href="css/style.css"></link>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
             </Head>
             <section className="profile">
                 <div className="profile__left">
@@ -57,6 +59,12 @@ export default function Profile() {
                     </div>
                     <div className="profile__post">
                         <Post/>
+                        <div className="profile__post-list">
+                            <PostPicture1/>
+                            <PostPicture2/>
+                            <PostPicture3/>
+                            <PostPicture4/>
+                        </div>
                     </div>
                 </div>
             </section>
