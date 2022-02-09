@@ -95,7 +95,7 @@
 }
 
 .reaction__comment__input textarea::placeholder {
-    color: var(--sub-text-color);
+    color: #747272;
     opacity: 0.8;
 }
 
