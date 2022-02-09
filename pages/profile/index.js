@@ -5,6 +5,7 @@ import Layout from "../../components/Layout/Layout";
 import Post from "../../components/Post/Post";
 import Logo from "../../public/images/Logo.png";
 import PostPicture1, { PostPicture2, PostPicture3, PostPicture4 } from "../../components/PostPicture/PostPicture";
+import PostVideo1, { PostVideo2 } from "../../components/PostVideo/PostVideo";
 
 export default function Profile() {
     return(
@@ -64,6 +65,8 @@ export default function Profile() {
                             <PostPicture2/>
                             <PostPicture3/>
                             <PostPicture4/>
+                            <PostVideo1/>
+                            <PostVideo2/>
                         </div>
                     </div>
                 </div>

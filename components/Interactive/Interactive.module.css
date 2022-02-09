@@ -46,10 +46,18 @@
 .reaction__share > .reaction__title,
 .reaction__vote > .reaction__title {
     position: absolute;
-    bottom: -10px;
+    top: -10px;
     right: -20px;
     font-size: 15px;
     font-weight: 700;
+}
+
+.reaction__like > span,
+.reaction__comment > span,
+.reaction__share > span {
+    font-size: 16px;
+    cursor: pointer;
+    padding-left: 8px;
 }
 
 .reaction__comment__post {

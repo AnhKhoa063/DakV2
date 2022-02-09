@@ -12,6 +12,7 @@ export default function Interactive() {
             <div className={Styles.reaction}>
                 <div className={Styles.reaction__like}>
                     <i className="fa-regular fa-heart"></i>
+                    <span>Thích</span>
                     <label className={Styles.reaction__title}>10</label>
                 </div>
                 <div className={Styles.reaction__vote}>
@@ -20,10 +21,12 @@ export default function Interactive() {
                 </div>
                 <div className={Styles.reaction__comment}>
                     <i className="fa-regular fa-message"></i>
+                    <span>Bình luận</span>
                     <label className={Styles.reaction__title}>10</label>
                 </div>
                 <div className={Styles.reaction__share}>
-                <i className="fa-solid fa-share-nodes"></i>
+                    <i className="fa-solid fa-share-nodes"></i>
+                    <span>Chia sẻ</span>
                     <label className={Styles.reaction__title}>10</label>
                 </div>
             </div>
