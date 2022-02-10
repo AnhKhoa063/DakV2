@@ -59,8 +59,8 @@ export default function Profile() {
                         <div className="profile__nav-item">Thống kê</div>
                     </div>
                     <div className="profile__post">
-                        <Post/>
                         <div className="profile__post-list">
+                            <Post/>
                             <PostPicture1/>
                             <PostPicture2/>
                             <PostPicture3/>
@@ -68,6 +68,9 @@ export default function Profile() {
                             <PostVideo1/>
                             <PostVideo2/>
                         </div>
+                    </div>
+                    <div className="profile__library">
+                        
                     </div>
                 </div>
             </section>
