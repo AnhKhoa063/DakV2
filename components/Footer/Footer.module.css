@@ -164,7 +164,7 @@
 }
 
 .footer__contact__item:hover p {
-    color: firebrick;
+    color: #e9b001;
     opacity: 1;
     transition: all ease 0.4s;
 }

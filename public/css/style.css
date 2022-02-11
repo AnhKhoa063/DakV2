@@ -4,6 +4,7 @@
     --sub-text-color: #747272;
     --white-color: #fff;
     --shadow-color: rgba(0, 0, 0, 0.25);
+    --main-color: #e9b001;
 }
 
 body {
@@ -536,7 +537,7 @@ body {
     line-height: 28px;
     margin: 0;
     font-weight: 600;
-    color: firebrick;
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -549,7 +550,7 @@ body {
 }
 
 .form__control-create span {
-    color: firebrick;
+    color: var(--main-color);
     cursor: pointer;    
 }
 
@@ -587,8 +588,8 @@ body {
 }
 
 .form__control-left input[type="submit"]:hover {
-    color: var(--white-color);
-    background-color: firebrick;
+    color: var(--sub-text-color);
+    background-image: linear-gradient(315deg,#fbb034 0%,#ffdd00 74%);
     box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
     transition: all ease 0.4s;
 }
@@ -606,6 +607,7 @@ body {
 
 .form__control-policy span {
     font-weight: 700;
+    color: var(--main-color);
 }
 
 .form__control-right {
@@ -634,7 +636,7 @@ body {
     position: absolute;
     top: 44%;
     left: -18px;
-    color: firebrick;
+    color: var(--main-color);
     font-weight: 600;
     font-size: 22px;
     text-transform: uppercase;
@@ -763,7 +765,7 @@ body {
 .profile__des > i {
     font-size: 14px;
     margin-left: 16px;
-    color: #e9b001;
+    color: var(--main-color);
     cursor: pointer;
 }
 
@@ -856,16 +858,19 @@ body {
     line-height: 28px;
     font-weight: 700;
     cursor: pointer;
+    padding: 0 14px 6px 14px;
 }
 
 .profile__nav-item.active {
-    color: #e9b001;
-    border-bottom: 1px solid #e9b001;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    transition: all ease 0.4s;
 }
 
 .profile__nav-item:hover {
-    color: #e9b001;
-    transition: all ease 0.4s;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    transition: all ease 0.2s;
 }
 
 .profile__post {
@@ -918,7 +923,9 @@ body {
     flex-wrap: nowrap;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 32px;
+    background-color: var(--main-background);
+    padding: 8px 16px;
+    border-radius: 4px;
 }
 
 .profile__library-heading-title {
@@ -940,18 +947,22 @@ body {
     margin-left: 40px;
     font-weight: 500;
     line-height: 28px;
-    font-size: 18px;
+    font-size: 20px;
     cursor: pointer;
+    padding: 0 14px 6px 14px;
 }
 
 .profile__library-nav-item.active {
-    color: #e9b001; 
-    border-bottom: 1px solid #e9b001;
+    color: var(--main-color);
+    border-bottom: 3px solid var(--main-color);
+    transition: all ease 0.4s;
 }
 
 .profile__library-nav-item:hover {
-    color: #e9b001; 
-    transition: all ease 0.4s;
+    opacity: 0.8;
+    color: var(--main-color); 
+    border-bottom: 3px solid var(--main-color);
+    transition: all ease 0.2s;
 }
 
 .profile__library-heading-btn {
@@ -1053,7 +1064,7 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     align-items: flex-start;
-    justify-content: space-between;
+    justify-content: flex-start;
     width: 100%;
 }
 
@@ -1064,7 +1075,7 @@ body {
 .profile__library-item {
     width: 22%;
     position: relative;
-    margin: 22px 4px 0 4px;
+    margin: 22px 12px 0 12px;
     background-color: var(--main-background);
     box-shadow: 0px 4px 4px var(--shadow-color);
     border-radius: 4px;
@@ -1125,4 +1136,64 @@ body {
     font-size: 15px;
     line-height: 28px;
     padding-left: 6px;
+}
+
+.profile__statistic-content {
+    overflow: auto;
+    height: 78vh;
+    box-sizing: border-box;
+}
+
+.profile__statistic-content::-webkit-scrollbar {
+    display: none;
+}
+
+.profile__statistic-heading {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-color);
+    margin: 12px 0;
+}
+
+.profile__statistic-action-list {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.profile__statistic-action-item {
+    background-color: var(--main-background);
+    margin: 16px 8px 0 8px;
+    width: 22%;
+    border-radius: 4px;
+    box-shadow: 0px 4px 4px var(--shadow-color);
+    padding: 8px;
+    min-height: 150px;
+}
+
+.profile__statistic-action-title {
+    margin: 6px 0 3px;
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--main-color);
+    line-height: 28px;
+}
+
+.profile__statistic-action-quantity {
+    margin: 3px 0;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 28px;
+}
+
+.profile__statistic-action-point {
+    margin: 12px 0 6px;
+    font-size: 18px;
+    line-height: 28px;
+    color: var(--sub-text-color);
+    font-weight: 700;
 }

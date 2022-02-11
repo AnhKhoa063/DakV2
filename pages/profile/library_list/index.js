@@ -64,71 +64,50 @@ export default function LibraryList() {
                 <div className="profile__right">
                     
                     <div className="profile__nav-list">
-                        {filters.map((filter, index) => 
-                            (<div className={`${"profile__nav-item"} ${(active === index) ? 'active' : null}`}  onClick={(e) => {setActive(index); e.preventDefault}} key={index}><Link href={index === 0 ? "/profile" : (index === 1 ? "/profile/library" : "/profile") }><a>{filter}</a></Link></div>)
-                        )}
+                        {filters.map((filter, index) => (
+                            <div className={`${"profile__nav-item"} ${(active === index) ? 'active' : ''}`}  onClick={(e) => {setActive(index); e.preventDefault}} key={index}>
+                                <Link href={index === 0 ? "/profile" : (index === 1 ? "/profile/library" : "/profile/statistic") }>
+                                    <a>{filter}</a>
+                                </Link>
+                        </div>
+                        ))}
                     </div>
                     <div className="profile__library">
                         <div className="profile__library-heading">
                             <h2 className="profile__library-heading-title">Mục đã lưu</h2>
                             <ul className="profile__library-nav">
-                                
-                                <li className={`${"profile__library-nav-item"} ${activeLink === 0 ? 'active' : ''}`} onCLick={() => setActiveLink(1)}><Link href="/profile/library"><a>Tất cả</a></Link></li>
-                                <li className={`${"profile__library-nav-item"} ${activeLink === 1 ? 'active' : ''}`} onCLick={() => setActiveLink(2)}><Link href="/profile/library_list"><a>Thư viện</a></Link></li>
+                                <li className={`${"profile__library-nav-item"} ${activeLink === 0 ? 'active' : ''}`} onClick={() => setActiveLink(1)}><Link href="/profile/library"><a>Tất cả</a></Link></li>
+                                <li className={`${"profile__library-nav-item"} ${activeLink === 1 ? 'active' : ''}`} onClick={() => setActiveLink(2)}><Link href="/profile/library_list"><a>Thư viện</a></Link></li>
                             </ul>
                             <button className="profile__library-heading-btn">Thêm thư viện</button>
                         </div>
                         <ul className="profile__library-list">
-                            <li className="profile__library-item">
-                                <div className="profile__library-img">
-                                    <Image src={Logo} alt="Avatar"/>
-                                    <i className="fa-solid fa-pen"></i>
-                                </div>
-                                <p className="profile__library-title">Javascript Basic</p>
-                                <p className="profile__library-subtitle">Để xem sau</p>
-                                <span className="profile__library-quantity">30 Mục</span>
-                            </li>
-                            <li className="profile__library-item">
-                                <div className="profile__library-img">
-                                    <Image src={Logo} alt="Avatar"/>
-                                    <i className="fa-solid fa-pen"></i>
-                                </div>
-                                <p className="profile__library-title">Javascript Basic</p>
-                                <p className="profile__library-subtitle">Để xem sau</p>
-                                <span className="profile__library-quantity">30 Mục</span>
-                            </li>
-                            <li className="profile__library-item">
-                                <div className="profile__library-img">
-                                    <Image src={Logo} alt="Avatar"/>
-                                    <i className="fa-solid fa-pen"></i>
-                                </div>
-                                <p className="profile__library-title">Javascript Basic</p>
-                                <p className="profile__library-subtitle">Để xem sau</p>
-                                <span className="profile__library-quantity">30 Mục</span>
-                            </li>
-                            <li className="profile__library-item">
-                                <div className="profile__library-img">
-                                    <Image src={Thumb} alt="Avatar"/>
-                                    <i className="fa-solid fa-pen"></i>
-                                </div>
-                                <p className="profile__library-title">Javascript Basic</p>
-                                <p className="profile__library-subtitle">Để xem sau</p>
-                                <span className="profile__library-quantity">30 Mục</span>
-                            </li>
-                            <li className="profile__library-item">
-                                <div className="profile__library-img">
-                                    <Image src={Thumb} alt="Avatar"/>
-                                    <i className="fa-solid fa-pen"></i>
-                                </div>
-                                <p className="profile__library-title">Javascript Basic</p>
-                                <p className="profile__library-subtitle">Để xem sau</p>
-                                <span className="profile__library-quantity">30 Mục</span>
-                            </li>
+                            <LiraryItem/>
+                            <LiraryItem/>
+                            <LiraryItem/>
+                            <LiraryItem/>
+                            <LiraryItem/>
+                            <LiraryItem/>
+                            <LiraryItem/>
                         </ul>
                     </div>
                 </div>
             </section>
             <Footer/>
         </Layout>
+    )
+}
+
+export function LiraryItem() {
+    return (
+        <li className="profile__library-item">
+            <div className="profile__library-img">
+                <Image src={Logo} alt="Avatar"/>
+                <i className="fa-solid fa-pen"></i>
+            </div>
+            <p className="profile__library-title">Javascript Basic</p>
+            <p className="profile__library-subtitle">Để xem sau</p>
+            <span className="profile__library-quantity">30 Mục</span>
+        </li>
     )
 }

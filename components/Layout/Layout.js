@@ -2,6 +2,7 @@ import Head from 'next/head';
 import Link from 'next/link';
 import Styles from './Layout.module.css';
 import Logo from '../../public/images/Logo.png';
+import Thumb from "../../public/images/javascript.jpg"
 import Image from 'next/image';
 
 export const siteTitle = "Home";
@@ -69,7 +70,11 @@ export default function Layout({children}) {
                             </li>
                             <li className={Styles.navbar__right__item}>
                                 <div className={Styles.navbar__right__theme}>
-                                    <Link href="/login"><i className="fas fa-circle"></i></Link>
+                                    <div className={Styles.navbar__right__avatar}>
+                                        <Link href="/login">
+                                            <a><Image src={Thumb} alt="Avatar" /></a>
+                                        </Link>
+                                    </div>
                                     <i className="fas fa-bars"></i>
                                 </div>
                             </li>

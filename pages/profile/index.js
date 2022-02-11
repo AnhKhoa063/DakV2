@@ -66,12 +66,13 @@ export default function Profile() {
                 </div>
                 <div className="profile__right">
                     <div className="profile__nav-list">
-                            {console.log(active)}
-                        {filters.map((filter, index) => 
-                            (<div className={`${"profile__nav-item"} ${(active === index) ? 'active' : null}`}  onClick={(e) => {setActive(index); e.preventDefault}} key={index}><Link href={index === 0 ? "/profile" : (index === 1 ? "/profile/library" : "/profile") }><a>{filter}</a></Link></div>)
-                        )}
-                        {/* <div className="profile__nav-item"><Link href="/profile/library"><a>Thư viện</a></Link></div>
-                        <div className="profile__nav-item"><Link href="/profile/statistic"><a>Thống kê</a></Link></div> */}
+                        {filters.map((filter, index) => (
+                            <div className={`${"profile__nav-item"} ${(active === index) ? 'active' : ''}`}  onClick={(e) => {setActive(index); e.preventDefault}} key={index}>
+                                <Link href={index === 0 ? "/profile" : (index === 1 ? "/profile/library" : "/profile/statistic") }>
+                                    <a>{filter}</a>
+                                </Link>
+                            </div>
+                        ))}
                     </div>
                     <div className="profile__post">
                         <Post/>

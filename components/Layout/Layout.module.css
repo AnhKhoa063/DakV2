@@ -148,10 +148,18 @@
 
 .navbar__right__theme {
     background-color: #eaeaea;
-    padding: 6px 20px;
+    padding: 6px 14px;
     border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
 
-.navbar__right__theme i:first-child {
+.navbar__right__avatar {
+    width: 32px;
+    height: 32px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 50%;
     margin-right: 12px;
 }

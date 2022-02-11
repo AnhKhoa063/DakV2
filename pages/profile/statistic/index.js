@@ -3,19 +3,18 @@ import Image from "next/image";
 import Footer from "../../../components/Footer/Footer";
 import Layout from "../../../components/Layout/Layout";
 import Logo from "../../../public/images/Logo.png";
-import Thumb from "../../../public/images/javascript.jpg";
 import Link from "next/link";
-import { useState } from 'react';
+import { useState } from "react";
 
-export default function Library() {
-    const [active, setActive] = useState(1);
-    const [activeLink, setActiveLink] = useState(0);
+export default function Statistic() {
+    const [active, setActive] = useState(2);
 
     const filters = [
         'Bài viết',
         'Thư viện',
         'Thống kê'
     ]
+    
 
     return(
         <Layout>
@@ -71,35 +70,17 @@ export default function Library() {
                             </div>
                         ))}
                     </div>
-                    <div className="profile__library">
-                        <div className="profile__library-heading">
-                            <h2 className="profile__library-heading-title">Mục đã lưu</h2>
-                            <ul className="profile__library-nav">
-                                <li className={`${"profile__library-nav-item"} ${activeLink === 0 ? 'active' : ''}`} onClick={() => setActiveLink(1)}>
-                                    <Link href="/profile/library">
-                                        <a>Tất cả</a>
-                                    </Link>
-                                </li>
-                                <li className={`${"profile__library-nav-item"} ${activeLink === 1 ? 'active' : ''}`} onClick={() => setActiveLink(2)}>
-                                    <Link href="/profile/library_list">
-                                        <a>Thư viện</a>
-                                    </Link>
-                                </li>
-                            </ul>
-                            <button className="profile__library-heading-btn">Thêm thư viện</button>
+                    <div className="profile__statistic-content">
+                        <h2 className="profile__statistic-heading">Hoạt động trong 24 giờ</h2>
+                        <div className="profile__statistic-action-list">
+                            <ActionItem/>
+                            <ActionItem/>
+                            <ActionItem/>
+                            <ActionItem/>
+                            <ActionItem/>
+                            <ActionItem/>
+                            <ActionItem/>
                         </div>
-                        <ul className="profile__library-all-list">
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                            <LibraryAllItem/>
-                        </ul>
                     </div>
                 </div>
             </section>
@@ -108,21 +89,12 @@ export default function Library() {
     )
 }
 
-export function LibraryAllItem() {
+export function ActionItem() {
     return (
-        <li className="profile__library-all-item">
-            <div className="profile__library-all-thumb">
-                <Image src={Thumb} alt="Thumb"/>
-            </div>
-            <div className="profile__library-all-title">
-                <Link href="/">
-                    <a className="profile__library-all-link">9 thủ thật javascript mà các lập trình viên cần phải biết</a>
-                </Link>
-                <p className="profile__library-all-subtitle">
-                    Bài viết -
-                    <span>Để xem sau</span>
-                </p>
-            </div>
-        </li>
+        <div className="profile__statistic-action-item">
+            <p className="profile__statistic-action-title">Tổng số điểm nhận được</p>
+            <p className="profile__statistic-action-quantity">50</p>
+            <p className="profile__statistic-action-point">+100 Điểm</p>
+        </div>
     )
 }
