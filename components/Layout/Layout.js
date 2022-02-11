@@ -4,7 +4,7 @@ import Styles from './Layout.module.css';
 import Logo from '../../public/images/Logo.png';
 import Image from 'next/image';
 
-export const siteTitle = "Demo NextJS";
+export const siteTitle = "Home";
 
 export default function Layout({children}) {
     return (

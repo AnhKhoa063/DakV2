@@ -6,8 +6,20 @@ import Post from "../../components/Post/Post";
 import Logo from "../../public/images/Logo.png";
 import PostPicture1, { PostPicture2, PostPicture3, PostPicture4 } from "../../components/PostPicture/PostPicture";
 import PostVideo1, { PostVideo2 } from "../../components/PostVideo/PostVideo";
+import Thumb from "../../public/images/javascript.jpg";
+import Link from "next/link";
+import { useState } from "react";
 
 export default function Profile() {
+    const [active, setActive] = useState(0);
+
+    const filters = [
+        'Bài viết',
+        'Thư viện',
+        'Thống kê'
+    ]
+    
+
     return(
         <Layout>
             <Head>
@@ -54,13 +66,16 @@ export default function Profile() {
                 </div>
                 <div className="profile__right">
                     <div className="profile__nav-list">
-                        <div className="profile__nav-item">Bài viết</div>
-                        <div className="profile__nav-item">Thư viện</div>
-                        <div className="profile__nav-item">Thống kê</div>
+                            {console.log(active)}
+                        {filters.map((filter, index) => 
+                            (<div className={`${"profile__nav-item"} ${(active === index) ? 'active' : null}`}  onClick={(e) => {setActive(index); e.preventDefault}} key={index}><Link href={index === 0 ? "/profile" : (index === 1 ? "/profile/library" : "/profile") }><a>{filter}</a></Link></div>)
+                        )}
+                        {/* <div className="profile__nav-item"><Link href="/profile/library"><a>Thư viện</a></Link></div>
+                        <div className="profile__nav-item"><Link href="/profile/statistic"><a>Thống kê</a></Link></div> */}
                     </div>
                     <div className="profile__post">
+                        <Post/>
                         <div className="profile__post-list">
-                            <Post/>
                             <PostPicture1/>
                             <PostPicture2/>
                             <PostPicture3/>
@@ -68,9 +83,6 @@ export default function Profile() {
                             <PostVideo1/>
                             <PostVideo2/>
                         </div>
-                    </div>
-                    <div className="profile__library">
-                        
                     </div>
                 </div>
             </section>
